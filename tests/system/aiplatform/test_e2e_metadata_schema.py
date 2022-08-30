@@ -82,7 +82,13 @@ class TestMetadataSchema(e2e_base.TestEndToEnd):
             display_name=self.artifact_display_name,
             metadata=self.artifact_metadata,
             description=self.artifact_description,
-        ).create()
+        )
+        print('------------')
+        print(artifact.metadata)
+        print(artifact.uri)
+        print('------------')
+        
+        artifact.create()
 
         shared_state["resources"].append(artifact)
 
